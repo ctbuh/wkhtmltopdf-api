@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>index.html</title>
+
+    <style>
+        textarea {
+            border: 1px solid #999999;
+            width: 95%;
+            height: 400px;
+            margin: 5px 0;
+        }
+
+        button {
+            padding: 15px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<form action="/v1/convert" method="POST">
+
+    <textarea name="html" title="html"></textarea>
+
+    <br>
+
+    <center>
+        <button type="submit">Convert</button>
+    </center>
+
+    <fieldset>
+        <legend>Options:</legend>
+
+        <div id="field_list"></div>
+    </fieldset>
+
+</form>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script>
+    $(function () {
+
+        $.getJSON('/v1/options', function (res) {
+
+            var options = res.options;
+            var list = $("#field_list");
+
+            for (var key in options) {
+
+                let val = options[key];
+
+                if (val == null) {
+                    val = '';
+                }
+
+                list.append('<div style="margin-top:4px;">' + key + ': &nbsp;<input type="text" name="options[' + key + ']" value="' + val + '">');
+            }
+
+        })
+    });
+</script>
+
+</body>
+</html>
+
