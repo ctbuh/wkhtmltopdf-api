@@ -12,6 +12,8 @@ https://www.npmjs.com/package/wkhtmltopdf
 
 [install.sh](./etc/install.sh)
 
+Run as super-user  
+sudo su
 
 ```shell
 bash <(curl -s https://raw.githubusercontent.com/ctbuh/wkhtmltopdf-api/master/etc/install.sh)

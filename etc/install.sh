@@ -5,7 +5,7 @@ sudo apt-get update && sudo apt-get -y upgrade
 sudo apt-get -y install fontconfig libxrender1 xfonts-base xfonts-75dpi libjpeg-turbo8 libxext6
 
 # TODO: auto tab + enter
-sudo apt-get install ttf-mscorefonts-installer
+sudo apt-get -y install ttf-mscorefonts-installer
 
 ## Not needed anymore?
 # sudo apt-get -f install
