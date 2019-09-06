@@ -4,7 +4,7 @@ sudo apt-get update && sudo apt-get -y upgrade
 
 sudo apt-get -y install fontconfig libxrender1 xfonts-base xfonts-75dpi libjpeg-turbo8 libxext6
 
-# todo: auto tab + enter
+# TODO: auto tab + enter
 sudo apt-get install ttf-mscorefonts-installer
 
 ## Not needed anymore?
@@ -33,5 +33,6 @@ cd wkhtmltopdf-api
 
 npm install
 
-wget "https://raw.githubusercontent.com/ctbuh/wkhtmltopdf-api/master/.env.port80"
+### using port 80
+wget -O ".env" "https://raw.githubusercontent.com/ctbuh/wkhtmltopdf-api/master/.env.production"
 

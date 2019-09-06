@@ -8,32 +8,16 @@ https://wkhtmltopdf.org/docs.html
 
 https://www.npmjs.com/package/wkhtmltopdf
 
-## Setup
+## Installation
+
+[install.sh](./etc/install.sh)
+
 
 ```shell
-sudo apt-get update && apt-get upgrade
-
-sudo apt-get install fontconfig libxrender1 xfonts-base xfonts-75dpi libjpeg-turbo8 libxext6
-sudo apt-get install ttf-mscorefonts-installer
-
-sudo apt-get -f install
-
-wget https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb
-dpkg -i wkhtmltox_0.12.5-1.bionic_amd64.deb
-
-# optional SSL
-
-sudo apt-get install libssl-dev libssl1.0-dev libssl1.0.0 libssl1.1
+bash <(curl -s https://raw.githubusercontent.com/ctbuh/wkhtmltopdf-api/master/etc/install.sh)
 ```
 
 ### Deploy
-
-Once:
-
-```shell
-git config --global credential.helper cache
-git pull
-```
 
 ```shell
 bash deploy.sh
