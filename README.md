@@ -8,7 +8,7 @@ https://wkhtmltopdf.org/docs.html
 
 https://www.npmjs.com/package/wkhtmltopdf
 
-## Installation
+## Install
 
 [install.sh](./etc/install.sh)
 
@@ -19,7 +19,7 @@ sudo su
 bash <(curl -s https://raw.githubusercontent.com/ctbuh/wkhtmltopdf-api/master/etc/install.sh)
 ```
 
-### Deploy
+## Deploy
 
 ```shell
 bash deploy.sh
