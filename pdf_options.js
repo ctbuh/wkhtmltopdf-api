@@ -61,22 +61,22 @@ function Options() {
     this.options = options;
 }
 
+// copy of merge {default, custom}
 Options.prototype.serialize = function (custom) {
 
     let oThis = this;
+    let cloned = Object.assign({}, oThis.options);
 
     if (typeof custom === 'object') {
 
         Object.keys(custom).forEach(function (key) {
 
             if (key in oThis.options) {
-                oThis.options[key] = custom[key];
+                cloned[key] = custom[key];
             }
 
         });
     }
-
-    let cloned = Object.assign({}, oThis.options);
 
     Object.keys(cloned).forEach(function (key) {
 
