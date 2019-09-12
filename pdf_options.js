@@ -80,18 +80,15 @@ Options.prototype.serialize = function (custom) {
 
     Object.keys(cloned).forEach(function (key) {
 
-        // submitted via POST form
-        if (cloned[key] === "" || cloned[key] === "false") {
+        // some items need to be excluded when sending through command line
+        // TODO: what if '0' is a valid value?
+        if (cloned[key] === null || cloned[key] === "" || cloned[key] === "false" || cloned[key] === '0') {
             delete cloned[key];
         }
 
-        // strict type!
-        if (cloned[key] === "true") {
+        // strict type! -> if true, will be included in command line but without value
+        if (cloned[key] === "true" || cloned[key] === '1') {
             cloned[key] = true;
-        }
-
-        if (cloned[key] === null) {
-            delete cloned[key];
         }
 
     });
