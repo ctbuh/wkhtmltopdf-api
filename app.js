@@ -8,7 +8,8 @@ app.use(express.static('public'));
 
 app.use(bodyParser.text());
 app.use(bodyParser.urlencoded({
-    extended: true
+    extended: true,
+	limit: '5mb'
 }));
 
 module.exports = app;
