@@ -88,7 +88,10 @@ Options.prototype.serialize = function (custom) {
 
         // strict type! -> if true, will be included in command line but without value
         if (cloned[key] === "true" || cloned[key] === '1') {
-            cloned[key] = true;
+
+            if (key !== 'zoom') {
+                cloned[key] = true;
+            }
         }
 
     });
