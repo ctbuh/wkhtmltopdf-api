@@ -38,6 +38,10 @@ CPU/GPU Optimized
 | g2.2xlarge  | 26   | 8     | 15        | $475            | $346           |
 
 
+### Additional Notes
+
+available 'pageSize' options:  
+- https://doc.qt.io/archives/qt-4.8/qprinter.html#PaperSize-enum
 
 ### Future/ideas
 
