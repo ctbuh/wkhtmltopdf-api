@@ -12,7 +12,11 @@ const options = {
     marginTop: null,
 
     orientation: 'Portrait',
+    
     pageSize: 'A4',
+    pageWidth: null,
+    pageHeight: null,
+    
     title: null,
 
     outline: null, // enabled by default
