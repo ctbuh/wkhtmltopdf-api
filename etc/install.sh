@@ -6,6 +6,7 @@ sudo apt-get -y install fontconfig libxrender1 xfonts-base xfonts-75dpi libjpeg-
 
 # TODO: auto tab + enter
 sudo apt-get -y install ttf-mscorefonts-installer
+sudo fc-cache -f -v
 
 ## Not needed anymore?
 # sudo apt-get -f install
